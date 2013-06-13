@@ -1,0 +1,24 @@
+<head>
+  <title>Spiderable Error</title>
+  <meta name="google-site-verification" content="H36ZL5dNzKqurWQsR8cRscwLpvxapRYONkODz5zUL4E" />
+</head>
+
+<body>
+  {{> menu}}
+  {{> page}}
+</body>
+
+<template name="menu">
+	<a class="open-home" href="#">Home</a>
+	<a class="open-page" href="#" data-page="page1">page1</a>
+	<a class="open-page" href="#" data-page="page2">page2</a>
+	<a class="open-page" href="#" data-page="page3">page3</a>
+</template>
+
+<template name="page">
+	{{#if isHome}}
+		<h1>Welcome to spiderable error</h1>
+	{{else}}
+		<h1>The active page is {{page}}</h1>
+	{{/if}}
+</template>
